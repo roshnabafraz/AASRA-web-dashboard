@@ -1,0 +1,134 @@
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dashboard-header h1 {
+    font-size: 2rem;
+    color: var(--text-main);
+    margin-bottom: 0.25rem;
+}
+
+.dashboard-header p {
+    color: var(--text-muted);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+.stat-card {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.stat-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-warning {
+    color: var(--warning);
+}
+
+.warning-bg {
+    background-color: var(--warning-bg);
+}
+
+.text-success {
+    color: var(--success);
+}
+
+.success-bg {
+    background-color: var(--success-bg);
+}
+
+.text-primary {
+    color: var(--primary);
+}
+
+.primary-bg {
+    background-color: rgba(15, 70, 39, 0.1);
+}
+
+[data-theme='dark'] .primary-bg {
+    background-color: rgba(15, 70, 39, 0.2);
+}
+
+.text-danger {
+    color: var(--danger);
+}
+
+.danger-bg {
+    background-color: var(--danger-bg);
+}
+
+.stat-info h3 {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.stat-value {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.dashboard-charts {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.chart-container {
+    padding: 1.5rem;
+}
+
+.chart-container h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.125rem;
+    color: var(--text-main);
+    margin-bottom: 1.5rem;
+}
+
+.chart-wrapper {
+    height: 300px;
+    width: 100%;
+}
+
+.loading-state {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    font-size: 1.25rem;
+    color: var(--text-muted);
+}

@@ -1,0 +1,29 @@
+{
+  "sos": {
+    "id": "0t3CgK0mJavGSoEqbsKY",
+    "notificationId": "0t3CgK0mJavGSoEqbsKY",
+    "message": "A new Food emergency has been reported nearby by Roshnab.",
+    "title": "New SOS Request",
+    "read": true,
+    "targetUserId": "all_volunteers",
+    "timestamp": {
+      "type": "firestore/timestamp/1.0",
+      "seconds": 1772291152,
+      "nanoseconds": 776000000
+    }
+  },
+  "web": {
+    "id": "5HN7H79Fl8KEHNiCU2uS",
+    "targetUserId": "all",
+    "timestamp": {
+      "type": "firestore/timestamp/1.0",
+      "seconds": 1772291124,
+      "nanoseconds": 18000000
+    },
+    "read": false,
+    "type": "broadcast",
+    "title": "hhh",
+    "message": "hhh",
+    "notificationId": "5HN7H79Fl8KEHNiCU2uS"
+  }
+}
