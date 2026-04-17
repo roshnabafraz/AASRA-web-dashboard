@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { LayoutDashboard, FileText, Heart, Users, UserX, Info, LogOut, Sun, Moon, Radio } from 'lucide-react';
+import { LayoutDashboard, FileText, Heart, Users, UserX, Info, LogOut, Sun, Moon } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import './Sidebar.css';
 
@@ -23,7 +23,6 @@ const Sidebar = () => {
         { name: 'Donations', path: '/donations', icon: <Heart size={20} /> },
         { name: 'Volunteers', path: '/volunteers', icon: <Users size={20} /> },
         { name: 'Victims', path: '/victims', icon: <UserX size={20} /> },
-        { name: 'Broadcast', path: '/broadcast', icon: <Radio size={20} /> },
         { name: 'About', path: '/about', icon: <Info size={20} /> },
     ];
 

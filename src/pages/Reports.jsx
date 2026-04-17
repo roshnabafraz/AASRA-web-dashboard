@@ -4,7 +4,7 @@ import { db } from '../firebase';
 import { MapPin, Search, Clock, Phone, User, Info, CheckCircle, XCircle, UserPlus, Archive, Download, FileText, Component } from 'lucide-react';
 import Papa from 'papaparse';
 import jsPDF from 'jspdf';
-import 'jspdf-autotable';
+import autoTable from 'jspdf-autotable';
 
 const timeAgo = (timestamp) => {
     if (!timestamp) return 'Time unknown';
@@ -171,7 +171,7 @@ const Reports = () => {
             r.volunteerName || 'None',
             r.timestamp?.toDate ? r.timestamp.toDate().toLocaleDateString() : 'Unknown'
         ]);
-        doc.autoTable({
+        autoTable(doc, {
             head: [['ID', 'Category', 'Status', 'Victim', 'Assignee', 'Date']],
             body: tableData,
             startY: 20,

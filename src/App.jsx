@@ -10,7 +10,6 @@ import Reports from './pages/Reports';
 import Donations from './pages/Donations';
 import Volunteers from './pages/Volunteers';
 import Victims from './pages/Victims';
-import Broadcast from './pages/Broadcast';
 
 function App() {
   return (
@@ -33,7 +32,6 @@ function App() {
             <Route path="donations" element={<Donations />} />
             <Route path="volunteers" element={<Volunteers />} />
             <Route path="victims" element={<Victims />} />
-            <Route path="broadcast" element={<Broadcast />} />
             <Route path="about" element={<About />} />
           </Route>
         </Routes>

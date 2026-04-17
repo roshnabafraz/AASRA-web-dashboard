@@ -4,7 +4,7 @@ import { collection, addDoc, onSnapshot, query, serverTimestamp } from 'firebase
 import { db } from '../firebase';
 import { Search, DollarSign, Calendar, Heart, Download, FileText, ArrowDownRight, ArrowUpRight, PlusCircle, List, PiggyBank } from 'lucide-react';
 import jsPDF from 'jspdf';
-import 'jspdf-autotable';
+import autoTable from 'jspdf-autotable';
 
 const GOOGLE_SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTJisIoOom2eVHs04PMBNhZW4YK-3GT3r3LdCtumq9PysfBe2417sAccYhc_vYEUoVZOg1YG8Mbo9-f/pub?output=csv";
 
@@ -148,7 +148,7 @@ const Donations = () => {
             ]);
         }
 
-        doc.autoTable({ head, body, startY: 20, styles: { fontSize: 9 }, headStyles: { fillColor: [15, 70, 39] } });
+        autoTable(doc, { head, body, startY: 20, styles: { fontSize: 9 }, headStyles: { fillColor: [15, 70, 39] } });
         doc.save(`AASRA_${activeTab}_${new Date().toISOString().split('T')[0]}.pdf`);
     };
 
